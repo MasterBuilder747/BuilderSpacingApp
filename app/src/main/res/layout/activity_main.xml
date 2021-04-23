@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     tools:context=".MainActivity">
 
     <Button
@@ -14,22 +15,21 @@
         android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.97" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buildValue"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.2" />
 
 
     <TextView
@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.03" />
     <NumberPicker
         android:id="@+id/build1Days"
         android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="@+id/buildText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.03" />
     <NumberPicker
         android:id="@+id/build2Days"
         android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.4" />
     <NumberPicker
         android:id="@+id/buildDays"
         android:layout_width="wrap_content"
@@ -158,7 +158,6 @@
         app:layout_constraintStart_toStartOf="@+id/buildText"
         app:layout_constraintTop_toTopOf="@+id/buildText"
         app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/buildValue"
         android:layout_width="wrap_content"
@@ -170,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buildDays"
         app:layout_constraintTop_toBottomOf="@+id/buildText"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="0.6" />
 
 
     <TextView
@@ -184,7 +183,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.34" />
     <TextView
         android:id="@+id/arrowtail"
         android:layout_width="wrap_content"
@@ -196,6 +195,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.34" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
