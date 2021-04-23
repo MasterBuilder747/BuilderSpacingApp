@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.101" />
     <NumberPicker
-        android:id="@+id/build1Hours"
+        android:id="@+id/build1Days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="@+id/build1Text"
         app:layout_constraintVertical_bias="0.0" />
     <NumberPicker
-        android:id="@+id/build1Days"
+        android:id="@+id/build1Hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -65,17 +65,19 @@
         app:layout_constraintStart_toStartOf="@+id/build1Text"
         app:layout_constraintTop_toTopOf="@+id/build1Text"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/build1Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Days             Hours"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/buildText"
-        app:layout_constraintEnd_toStartOf="@+id/build1Days"
+        app:layout_constraintEnd_toStartOf="@+id/build1Hours"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/build1Hours"
+        app:layout_constraintStart_toEndOf="@+id/build1Days"
         app:layout_constraintTop_toBottomOf="@+id/build1Text"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/build2Text"
@@ -89,7 +91,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.101" />
     <NumberPicker
-        android:id="@+id/build2Hours"
+        android:id="@+id/build2Days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -100,7 +102,7 @@
         app:layout_constraintTop_toTopOf="@+id/build2Text"
         app:layout_constraintVertical_bias="0.0" />
     <NumberPicker
-        android:id="@+id/build2Days"
+        android:id="@+id/build2Hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -110,17 +112,19 @@
         app:layout_constraintStart_toStartOf="@+id/build2Text"
         app:layout_constraintTop_toTopOf="@+id/build2Text"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/build2Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Days             Hours"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/buildText"
-        app:layout_constraintEnd_toStartOf="@+id/build2Days"
+        app:layout_constraintEnd_toStartOf="@+id/build2Hours"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/build2Hours"
+        app:layout_constraintStart_toEndOf="@+id/build2Days"
         app:layout_constraintTop_toBottomOf="@+id/build2Text"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/buildText"
@@ -133,7 +137,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47" />
     <NumberPicker
-        android:id="@+id/buildHours"
+        android:id="@+id/buildDays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -144,7 +148,7 @@
         app:layout_constraintTop_toTopOf="@+id/buildText"
         app:layout_constraintVertical_bias="0.0" />
     <NumberPicker
-        android:id="@+id/buildDays"
+        android:id="@+id/buildHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -154,17 +158,19 @@
         app:layout_constraintStart_toStartOf="@+id/buildText"
         app:layout_constraintTop_toTopOf="@+id/buildText"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/buildValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Days             Hours"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/calculate"
-        app:layout_constraintEnd_toStartOf="@+id/buildDays"
+        app:layout_constraintEnd_toStartOf="@+id/buildHours"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buildHours"
+        app:layout_constraintStart_toEndOf="@+id/buildDays"
         app:layout_constraintTop_toBottomOf="@+id/buildText"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.77" />
 
 
     <TextView

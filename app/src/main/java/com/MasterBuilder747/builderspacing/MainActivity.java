@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.NumberPicker;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -14,24 +13,59 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements NumberPicker.OnValueChangeListener {
 
-    private TextView buildText;
-    private int build;
+    private NumberPicker buildHours;
+    private NumberPicker build1Hours;
+    private NumberPicker build2Hours;
+    private NumberPicker buildDays;
+    private NumberPicker build1Days;
+    private NumberPicker build2Days;
+
+    private int hours;
+    private int hours1;
+    private int hours2;
+    private int days;
+    private int days1;
+    private int days2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buildText = findViewById(R.id.buildText);
-
-//        NumberPicker buildN = findViewById(R.id.result3);
-//        buildN.setMinValue(0);
-//        buildN.setMaxValue(23);
-//        buildN.setOnValueChangedListener(this);
+        //spinners
+        //hours
+        build1Hours = findViewById(R.id.build1Days);
+        build1Hours.setMinValue(0);
+        build1Hours.setMaxValue(23);
+        build1Hours.setOnValueChangedListener(this);
+        build2Hours = findViewById(R.id.build2Days);
+        build2Hours.setMinValue(0);
+        build2Hours.setMaxValue(23);
+        build2Hours.setOnValueChangedListener(this);
+        buildHours = findViewById(R.id.buildDays);
+        buildHours.setMinValue(0);
+        buildHours.setMaxValue(23);
+        buildHours.setOnValueChangedListener(this);
+        //days
+        build1Days = findViewById(R.id.build1Hours);
+        build1Days.setMinValue(0);
+        build1Days.setMaxValue(28);
+        build1Days.setOnValueChangedListener(this);
+        build2Days = findViewById(R.id.build2Hours);
+        build2Days.setMinValue(0);
+        build2Days.setMaxValue(28);
+        build2Days.setOnValueChangedListener(this);
+        buildDays = findViewById(R.id.buildHours);
+        buildDays.setMinValue(0);
+        buildDays.setMaxValue(28);
+        buildDays.setOnValueChangedListener(this);
 
         Button button = findViewById(R.id.calculate);
         button.setOnClickListener(v -> {
-
+            Toast.makeText(this, "build: " + days + " days, " + hours + " hours\n"
+                    + "build1: " + days1 + " days, " + hours1 + " hours\n"
+                    + "build2: " + days2 + " days, " + hours2 + " hours",
+                    Toast.LENGTH_SHORT).show();
 
             @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyyHHmm");
             Date date = new Date(System.currentTimeMillis());
@@ -40,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements NumberPicker.OnVa
             int day = Integer.parseInt(currentTime.substring(2, 4));
             int year = Integer.parseInt(currentTime.substring(4, 8));
             int hour = Integer.parseInt(currentTime.substring(8, 10));
-
             //Toast.makeText(this, month + "\n" + day + "\n" + year + "\n" + hour, Toast.LENGTH_SHORT).show();
 
             //get user input here
@@ -154,7 +187,24 @@ public class MainActivity extends AppCompatActivity implements NumberPicker.OnVa
 
     @Override
     public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-        //buildText.setText(String.valueOf(oldVal)); //fixes the crash
+        if (picker.getId() == R.id.buildDays) {
+            days = newVal;
+        }
+        if (picker.getId() == R.id.build1Days) {
+            days1 = newVal;
+        }
+        if (picker.getId() == R.id.build2Days) {
+            days2 = newVal;
+        }
+        if (picker.getId() == R.id.buildHours) {
+            hours = newVal;
+        }
+        if (picker.getId() == R.id.build1Hours) {
+            hours1 = newVal;
+        }
+        if (picker.getId() == R.id.build2Hours) {
+            hours2 = newVal;
+        }
     }
 
     //converts a string of days/hours to a double
