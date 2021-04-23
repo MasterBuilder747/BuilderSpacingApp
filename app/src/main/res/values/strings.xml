@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Clash Of Clans Builder Spacing</string>
+    <string name="calculate">Calculate</string>
+    <string name="desired_build_time">Desired build time:</string>
+    <string name="first_build_time">First build time:</string>
+    <string name="second_build_time">Second build time:</string>
+    <string name="arrowhead">^</string>
+    <string name="arrowtail">|</string>
+</resources>
